@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0d15a3d4965c8541926a7c8961180fe, type: 3}
+  m_Name: SheraWordList
+  m_EditorClassIdentifier: 
+  words:
+  - word: She-Ra
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Scorpia
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Catra
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Entrapta
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Glimmer
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Mermista
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Hordak
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Bow
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Perfuma
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Frosta
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Huntara
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Adora
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Razz
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Angella
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1

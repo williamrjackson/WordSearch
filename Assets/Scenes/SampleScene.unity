@@ -775,7 +775,7 @@ MonoBehaviour:
   gridLayout: {fileID: 2098230279}
   letterUnitPrototype: {fileID: 2688044576324692660, guid: ad549a486ed433d4da60b72cafc322fb,
     type: 3}
-  wordList: {fileID: 11400000, guid: cee42ecc161103248ba2d97e4ca64dac, type: 2}
+  wordList: {fileID: 11400000, guid: be41ffad7f72ae441a44e96bb612e930, type: 2}
   wordReference: {fileID: 990506472}
   allowBackwards: 1
 --- !u!4 &470140840
