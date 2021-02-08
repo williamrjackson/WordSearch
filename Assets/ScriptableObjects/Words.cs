@@ -17,7 +17,7 @@ public class Words : ScriptableObject
         public bool isFound = false;
         public void SetRange(LetterUnit start, LetterUnit end)
         {
-            Debug.Log("Setting " + word + " to " + start.Letter + " - " + end.Letter);
+            //Debug.Log("Setting " + word + " to " + start.Letter + " - " + end.Letter);
             this.start = start;
             this.end = end;
         }

@@ -10,7 +10,7 @@ public class LetterUnit : MonoBehaviour
     public int column;
     public int row;
     public bool isPartOfWord = false;
-    public static string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    public const string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     public static LetterUnit over = null;
     public char Letter
@@ -36,7 +36,6 @@ public class LetterUnit : MonoBehaviour
     void OnMouseEnter()
     {
         over = this;
-        Debug.Log(over.Letter);
     }
     void OnMouseExit()
     {

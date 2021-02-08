@@ -5,7 +5,7 @@ using TMPro;
 
 public class WordReference : MonoBehaviour
 {
-    public List<TextMeshPro> textList;
+    public List<TextMeshProUGUI> textList;
     // Update is called once per frame
     public void Populate(Words wordlist)
     {
@@ -25,7 +25,7 @@ public class WordReference : MonoBehaviour
     }
     public void Strike(string word)
     {
-        foreach (TextMeshPro item in textList)
+        foreach (TextMeshProUGUI item in textList)
         {
             if (item.text.ToLower() == word.ToLower())
             {

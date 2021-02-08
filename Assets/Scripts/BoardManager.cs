@@ -48,7 +48,7 @@ public class BoardManager : MonoBehaviour
     void BuildBoard()
     {
         int size = Mathf.Max(columns, rows);
-        Camera.main.orthographicSize = Mathf.Clamp(Wrj.Utils.Remap(size, 0, 30, 0, 9), 5, 9);
+        Camera.main.orthographicSize = Mathf.Clamp(Wrj.Utils.Remap(size, 0, 30, 0, 10), 5, 10);
         int unitCount = columns * rows;
         if (unitCount < 1) return;
 
@@ -340,12 +340,12 @@ public class BoardManager : MonoBehaviour
 
     public bool CheckWord(LetterUnit a, LetterUnit b)
     {
-        Debug.Log("Checking " + a.Letter + " to " + b.Letter);
+        //Debug.Log("Checking " + a.Letter + " to " + b.Letter);
         foreach (Words.Word word in wordList.words)
         {
             if ((word.start == a && word.end == b) || word.end == a && word.start == b)
             {
-                Debug.Log(word.word + " FOUND!");
+                //Debug.Log(word.word + " FOUND!");
                 wordReference.Strike(word.word);
                 word.isFound = true;
                 return true;
