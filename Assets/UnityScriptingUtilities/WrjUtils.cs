@@ -130,6 +130,11 @@ namespace Wrj
             MapToCurve.Linear.Delay(delay, methodWithParameters);
         }
 
+        public static void DeferPostFrame(System.Action method)
+        {
+            MapToCurve.Linear.EndOfFrame(method);
+        }
+
         public static void SafeTry(System.Action action)
         {
             try
@@ -1105,6 +1110,16 @@ namespace Wrj
             private IEnumerator DelayCoro(float delay, System.Action methodWithParameters)
             {
                 yield return new WaitForSecondsRealtime(delay);
+                methodWithParameters();
+            }
+
+            public void EndOfFrame(System.Action methodWithParameters)
+            {
+                UtilObject().StartCoroutine(EndOfFrameCoro(methodWithParameters));
+            }
+            private IEnumerator EndOfFrameCoro(System.Action methodWithParameters)
+            {
+                yield return new WaitForEndOfFrame();
                 methodWithParameters();
             }
 
