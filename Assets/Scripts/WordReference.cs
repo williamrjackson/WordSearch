@@ -13,7 +13,7 @@ public class WordReference : MonoBehaviour
         {
             textList[i].fontStyle = FontStyles.Normal;
             textList[i].faceColor = Color.white;
-            if (i < wordlist.words.Length - 1)
+            if (i < wordlist.words.Length)
             {
                 textList[i].text = wordlist.words[i].word;
             }
