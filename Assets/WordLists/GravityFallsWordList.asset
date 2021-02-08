@@ -28,11 +28,11 @@ MonoBehaviour:
   - word: Bill
     start: {fileID: 0}
     end: {fileID: 0}
-    isFound: 0
+    isFound: 1
   - word: Mabel
     start: {fileID: 0}
     end: {fileID: 0}
-    isFound: 0
+    isFound: 1
   - word: Soos
     start: {fileID: 0}
     end: {fileID: 0}
@@ -52,4 +52,28 @@ MonoBehaviour:
   - word: Gideon
     start: {fileID: 0}
     end: {fileID: 0}
-    isFound: 0
+    isFound: 1
+  - word: Blendin
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Cipher
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Pacifica
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Fiddleford
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Shmebulock
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Grenda
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
