@@ -34,6 +34,7 @@ public class Words : ScriptableObject
         }
         public void SetRange(LetterUnit start, LetterUnit end)
         {
+            this.isFound = false;
             //Debug.Log("Setting " + word + " to " + start.Letter + " - " + end.Letter);
             this.start = start;
             this.end = end;

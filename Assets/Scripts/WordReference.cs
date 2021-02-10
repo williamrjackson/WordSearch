@@ -6,7 +6,7 @@ using TMPro;
 public class WordReference : MonoBehaviour
 {
     public List<TextMeshProUGUI> textList;
-    // Update is called once per frame
+
     public void Populate(Words wordlist)
     {
         for (int i = 0; i < textList.Count; i++)

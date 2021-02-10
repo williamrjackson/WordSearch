@@ -11,7 +11,22 @@ public class LineManager : MonoBehaviour
     private LetterUnit currentLineEnd;
     private LineRenderer currentLine;
 
+    private List<GameObject> lineList = new List<GameObject>();
+
     private static int lastColorIndex = 0;
+    public static LineManager Instance;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
     Color NextColor
     {
         get
@@ -52,11 +67,25 @@ public class LineManager : MonoBehaviour
         {
             if (!board.CheckWord(currentLineStart, currentLineEnd))
             {
-                GameObject.Destroy(currentLine);
+                Destroy(currentLine);
+            }
+            else
+            {
+                lineList.Add(currentLine.gameObject);
+                board.CheckForWin();
             }
             currentLineStart = null;
             currentLine = null;
         }
+    }
+
+    public void ClearLines()
+    {
+        foreach (GameObject line in lineList)
+        {
+            Destroy(line);
+        }
+        lineList.Clear();
     }
 
     bool IsValidLine()

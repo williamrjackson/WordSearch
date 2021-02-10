@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
-    [Range(1, 30)]
+    [Range(15, 30)]
     public int columns = 25;
-    [Range(1, 30)]
+    [Range(15, 30)]
     public int rows = 25;
     public Wrj.GridLayout3d gridLayout;
     public LetterUnit letterUnitPrototype;
-    public Words wordList;
+    public Words[] wordLists;
     public WordReference wordReference;
     public bool allowBackwards;
+    public Curtain curtain;
 
-    private int cachedCol, cachedRow;
-
+    private int currentWordlistIndex = 0;
     private List<LetterUnit> letterUnits = new List<LetterUnit>();
+
     private enum Direction { Up, Down, Back, Forward, DiagUpForward, DiagUpBack, DiagDownForward, DiagDownBack}
     private Direction[] allDirections =
     {
@@ -37,20 +38,33 @@ public class BoardManager : MonoBehaviour
         Direction.DiagDownForward,
     };
 
-    void Update()
+    private void Start()
     {
-        if (cachedCol != columns || cachedRow != rows)
+        StartCoroutine(BuildBoard(wordLists[currentWordlistIndex]));
+    }
+
+    void ClearLetterUnits()
+    {
+        while (letterUnits.Count > 0)
         {
-            BuildBoard();
+            RemoveLetterUnit(letterUnits.GetRandom());
         }
     }
 
-    void BuildBoard()
+    IEnumerator BuildBoard(Words wordList)
     {
+        if (!curtain.IsVisible)
+        {
+            curtain.IsVisible = true;
+            yield return new WaitForSeconds(curtain.Duration + .5f);
+        }
+        ClearLetterUnits();
+        LineManager.Instance.ClearLines();
+
         int size = Mathf.Max(columns, rows);
         Camera.main.orthographicSize = Mathf.Clamp(Wrj.Utils.Remap(size, 0, 30, 0, 10), 5, 10);
         int unitCount = columns * rows;
-        if (unitCount < 1) return;
+        if (unitCount < 1) yield return null;
 
         while(unitCount > letterUnits.Count)
         {
@@ -71,21 +85,20 @@ public class BoardManager : MonoBehaviour
             }
         }
         gridLayout.columns = columns;
-        cachedRow = rows;
-        cachedCol = columns;
 
         wordReference.Populate(wordList);
 
-        Wrj.Utils.DeferredExecution(2f, () =>
+        Wrj.Utils.DeferPostFrame(() =>
         {
             foreach (Words.Word item in wordList.words)
             {
-                if (item.word.Length < Mathf.Min(columns, rows))
+                if (item.treatedWord.Length < Mathf.Min(columns, rows))
                 {
                     AddWord(item);
                 }
             }
         });
+        curtain.IsVisible = false;
     }
 
     void AddLetterUnit()
@@ -98,7 +111,7 @@ public class BoardManager : MonoBehaviour
     void RemoveLetterUnit(LetterUnit unit)
     {
         letterUnits.Remove(unit);
-        Destroy(unit);
+        Destroy(unit.gameObject);
     }
 
     private LetterUnit GetLetterGridIndex(int column, int row)
@@ -111,6 +124,7 @@ public class BoardManager : MonoBehaviour
 
     bool PlaceLetters(Words.Word word, int startRow, int startCol, Direction dir, bool apply)
     {
+        //if (apply) Debug.Log("Appling " + word.word);
         int x = startCol;
         int y = startRow;
         switch (dir)
@@ -341,7 +355,7 @@ public class BoardManager : MonoBehaviour
     public bool CheckWord(LetterUnit a, LetterUnit b)
     {
         //Debug.Log("Checking " + a.Letter + " to " + b.Letter);
-        foreach (Words.Word word in wordList.words)
+        foreach (Words.Word word in wordLists[currentWordlistIndex].words)
         {
             if ((word.start == a && word.end == b) || word.end == a && word.start == b)
             {
@@ -352,6 +366,17 @@ public class BoardManager : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public bool CheckForWin()
+    {
+        foreach (Words.Word word in wordLists[currentWordlistIndex].words)
+        {
+            if (!word.isFound) return false;
+        }
+        currentWordlistIndex = (currentWordlistIndex + 1) % wordLists.Length;
+        StartCoroutine(BuildBoard(wordLists[currentWordlistIndex]));
+        return true;
     }
 
     Direction RandomDirection

@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 163019598}
   - component: {fileID: 163019597}
   m_Layer: 5
-  m_Name: Text (TMP) (9)
+  m_Name: TMP Word Ref 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -204,12 +204,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -218,9 +218,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -245,13 +245,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 163019597}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 181027099}
   - component: {fileID: 181027098}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: TMP Word Ref 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -359,12 +359,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -373,9 +373,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -400,13 +400,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 181027098}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 275984814}
   - component: {fileID: 275984813}
   m_Layer: 5
-  m_Name: Text (TMP) (8)
+  m_Name: TMP Word Ref 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -514,12 +514,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -528,9 +528,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -555,13 +555,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 275984813}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 373805865}
   - component: {fileID: 373805864}
   m_Layer: 5
-  m_Name: Text (TMP) (12)
+  m_Name: TMP Word Ref 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -669,12 +669,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -683,9 +683,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -710,13 +710,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 373805864}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -740,6 +740,94 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373805862}
+  m_CullTransparentMesh: 0
+--- !u!1 &377823750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 377823751}
+  - component: {fileID: 377823754}
+  - component: {fileID: 377823753}
+  - component: {fileID: 377823752}
+  m_Layer: 5
+  m_Name: Curtain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &377823751
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377823750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 900502287}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &377823752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377823750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d12452ca1146eb4d85b8a6d36c064f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shownOnStart: 1
+  duration: 2
+--- !u!114 &377823753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377823750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0a9b7d9af584bed4eb24d6292b5376b7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &377823754
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377823750}
   m_CullTransparentMesh: 0
 --- !u!1 &470140838
 GameObject:
@@ -770,14 +858,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a05042c1e0b9e4aa9271595e8cd8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  columns: 20
-  rows: 20
+  columns: 15
+  rows: 15
   gridLayout: {fileID: 2098230279}
   letterUnitPrototype: {fileID: 2688044576324692660, guid: ad549a486ed433d4da60b72cafc322fb,
     type: 3}
-  wordList: {fileID: 11400000, guid: be41ffad7f72ae441a44e96bb612e930, type: 2}
+  wordLists:
+  - {fileID: 11400000, guid: 8b9834557da979a44a8cc006c5c3bf37, type: 2}
+  - {fileID: 11400000, guid: 4e9367cc3d9799e459fe6910b920f5c5, type: 2}
+  - {fileID: 11400000, guid: be41ffad7f72ae441a44e96bb612e930, type: 2}
+  - {fileID: 11400000, guid: cee42ecc161103248ba2d97e4ca64dac, type: 2}
+  - {fileID: 11400000, guid: 65a8a5b99c801f44c8e90bd9d1166c86, type: 2}
   wordReference: {fileID: 990506472}
   allowBackwards: 1
+  curtain: {fileID: 377823752}
 --- !u!4 &470140840
 Transform:
   m_ObjectHideFlags: 0
@@ -806,7 +900,7 @@ GameObject:
   - component: {fileID: 562573295}
   - component: {fileID: 562573294}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: TMP Word Ref 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -849,7 +943,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -877,12 +971,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -891,9 +985,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -918,13 +1012,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 562573294}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -961,7 +1055,7 @@ GameObject:
   - component: {fileID: 663958515}
   - component: {fileID: 663958514}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: TMP Word Ref 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1004,7 +1098,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -1032,12 +1126,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -1046,9 +1140,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -1073,13 +1167,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 663958514}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1151,12 +1245,12 @@ MonoBehaviour:
   linePrototype: {fileID: 808706599}
   board: {fileID: 470140839}
   colors:
-  - {r: 1, g: 0.41037738, b: 0.7855217, a: 1}
-  - {r: 0.5644038, g: 0.41568625, b: 1, a: 1}
-  - {r: 0.41568625, g: 0.71548074, b: 1, a: 1}
-  - {r: 0.41568625, g: 1, b: 0.8001151, a: 1}
-  - {r: 0.757119, g: 1, b: 0.41568625, a: 1}
-  - {r: 1, g: 0.8211371, b: 0.41568625, a: 1}
+  - {r: 1, g: 0, b: 0.6333332, a: 0.4745098}
+  - {r: 0, g: 0.07363939, b: 1, a: 0.4745098}
+  - {r: 1, g: 0, b: 0.07028246, a: 0.4745098}
+  - {r: 0, g: 1, b: 0.21964121, a: 0.4745098}
+  - {r: 1, g: 0.98995423, b: 0, a: 0.4745098}
+  - {r: 1, g: 0.47338852, b: 0, a: 0.4745098}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,7 +1325,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.368e-42, y: 1.01e-43, z: 980710.94, w: 0}
+  m_BoundingSphereOverride: {x: 3.0092666e-36, y: 1.009742e-28, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1261,7 +1355,7 @@ GameObject:
   - component: {fileID: 724281893}
   - component: {fileID: 724281892}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: TMP Word Ref 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1304,7 +1398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -1332,12 +1426,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -1346,9 +1440,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -1373,13 +1467,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 724281892}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1453,7 +1547,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 681152ec65d504947b7f99dc6b000f5b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1623,6 +1717,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 990506471}
+  - {fileID: 377823751}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1725,6 +1820,7 @@ GameObject:
   - component: {fileID: 990506471}
   - component: {fileID: 990506473}
   - component: {fileID: 990506472}
+  - component: {fileID: 990506474}
   m_Layer: 5
   m_Name: Word Reference
   m_TagString: Untagged
@@ -1816,10 +1912,22 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 50, y: 15}
+  m_CellSize: {x: 116.25, y: 11.625}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &990506474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990506470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a51367fe53d714c8c73f86bf3b322a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1112163637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,7 +1940,7 @@ GameObject:
   - component: {fileID: 1112163640}
   - component: {fileID: 1112163639}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: TMP Word Ref 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1875,7 +1983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -1903,12 +2011,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -1917,9 +2025,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -1944,13 +2052,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1112163639}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1987,7 +2095,7 @@ GameObject:
   - component: {fileID: 1443220236}
   - component: {fileID: 1443220235}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: TMP Word Ref 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2030,7 +2138,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -2058,12 +2166,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -2072,9 +2180,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -2099,13 +2207,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1443220235}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -2142,7 +2250,7 @@ GameObject:
   - component: {fileID: 1474405875}
   - component: {fileID: 1474405874}
   m_Layer: 5
-  m_Name: Text (TMP) (15)
+  m_Name: TMP Word Ref 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2185,7 +2293,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -2213,12 +2321,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -2227,9 +2335,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -2254,13 +2362,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1474405874}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -2297,7 +2405,7 @@ GameObject:
   - component: {fileID: 1723948133}
   - component: {fileID: 1723948132}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TMP Word Ref 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2340,7 +2448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -2368,12 +2476,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -2382,9 +2490,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -2409,13 +2517,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1723948132}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -2452,7 +2560,7 @@ GameObject:
   - component: {fileID: 1746496093}
   - component: {fileID: 1746496092}
   m_Layer: 5
-  m_Name: Text (TMP) (13)
+  m_Name: TMP Word Ref 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2495,7 +2603,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -2523,12 +2631,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -2537,9 +2645,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -2564,13 +2672,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1746496092}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -2607,7 +2715,7 @@ GameObject:
   - component: {fileID: 1780174271}
   - component: {fileID: 1780174270}
   m_Layer: 5
-  m_Name: Text (TMP) (14)
+  m_Name: TMP Word Ref 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2650,7 +2758,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -2678,12 +2786,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -2692,9 +2800,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -2719,13 +2827,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1780174270}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -2762,7 +2870,7 @@ GameObject:
   - component: {fileID: 1807904165}
   - component: {fileID: 1807904164}
   m_Layer: 5
-  m_Name: Text (TMP) (11)
+  m_Name: TMP Word Ref 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2805,7 +2913,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -2833,12 +2941,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -2847,9 +2955,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -2874,13 +2982,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1807904164}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -2917,7 +3025,7 @@ GameObject:
   - component: {fileID: 1845233536}
   - component: {fileID: 1845233535}
   m_Layer: 5
-  m_Name: Text (TMP) (10)
+  m_Name: TMP Word Ref 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2960,7 +3068,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -2988,12 +3096,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -3002,9 +3110,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -3029,13 +3137,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1845233535}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -3138,7 +3246,7 @@ GameObject:
   - component: {fileID: 2008395142}
   - component: {fileID: 2008395141}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: TMP Word Ref 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3181,7 +3289,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Word Example
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e3a76d384060f6d45a1da4591b6049e1, type: 2}
@@ -3209,12 +3317,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -3223,9 +3331,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -3250,13 +3358,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2008395141}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0

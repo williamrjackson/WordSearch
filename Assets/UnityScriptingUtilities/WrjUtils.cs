@@ -29,7 +29,7 @@ namespace Wrj
         {
             // Do nothing, but trick the compiler into thinking otherwise.
         }
-        
+
         /// Call a function for a game object and all of its children.
         public delegate void GameObjectAffector(GameObject gObject);
         public static void AffectGORecursively(GameObject go, GameObjectAffector goa, bool skipParent = false)
@@ -47,7 +47,7 @@ namespace Wrj
                 AffectGORecursively(t.gameObject, goa, false);
             }
         }
-	    
+
         /// Ensure an angle in degrees is within 0 - 360.
         public static float GetPositiveAngle(float angle)
         {
@@ -130,6 +130,11 @@ namespace Wrj
             MapToCurve.Linear.Delay(delay, methodWithParameters);
         }
 
+        public static void DeferPostFrame(System.Action method)
+        {
+            MapToCurve.Linear.EndOfFrame(method);
+        }
+
         public static void SafeTry(System.Action action)
         {
             try
@@ -172,19 +177,19 @@ namespace Wrj
             }
             return Mathf.Abs(f);
         }
-		
-	    /// <summary>
-	    ///  Get difference between two values
-	    /// </summary>
-	    public static float Difference(float val1, float val2)
-	    {
-	    	return Mathf.Abs(val1 - val2);	
-	    }
-	    public static int Difference(int val1, int val2)
-	    {
-	    	return Mathf.Abs(val1 - val2);	
-	    }
-	    
+
+        /// <summary>
+        ///  Get difference between two values
+        /// </summary>
+        public static float Difference(float val1, float val2)
+        {
+            return Mathf.Abs(val1 - val2);
+        }
+        public static int Difference(int val1, int val2)
+        {
+            return Mathf.Abs(val1 - val2);
+        }
+
         public static bool CoinFlip
         {
             get { return (Random.Range(-1f, 1f) > 0) ? true : false; }
@@ -258,7 +263,7 @@ namespace Wrj
                     transform = _transform;
                     if (wrjInstance == null)
                         return;
-                    foreach(Manipulation mcp in wrjInstance.m_ManipulationList)
+                    foreach (Manipulation mcp in wrjInstance.m_ManipulationList)
                     {
                         if (mcp.transform == transform && mcp.type == type && type != "")
                         {
@@ -659,7 +664,7 @@ namespace Wrj
                     from = to - from;
                 }
 
-                if (pingPong != 0) 
+                if (pingPong != 0)
                 {
                     mcp.coroutine = UtilObject().StartCoroutine(RotateLocal(mcp, tform, to, from, duration, mirrorCurve, 0, --pingPong, 0, useTimeScale, pendulum, onDone));
                 }
@@ -1105,6 +1110,16 @@ namespace Wrj
             private IEnumerator DelayCoro(float delay, System.Action methodWithParameters)
             {
                 yield return new WaitForSecondsRealtime(delay);
+                methodWithParameters();
+            }
+
+            public void EndOfFrame(System.Action methodWithParameters)
+            {
+                UtilObject().StartCoroutine(EndOfFrameCoro(methodWithParameters));
+            }
+            private IEnumerator EndOfFrameCoro(System.Action methodWithParameters)
+            {
+                yield return new WaitForEndOfFrame();
                 methodWithParameters();
             }
 
