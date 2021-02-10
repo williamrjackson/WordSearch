@@ -30,7 +30,7 @@ public class LetterUnit : MonoBehaviour
     void Start()
     {
         Letter = Alphabet.ToCharArray().GetRandom();
-        text.text = text.text.ToLower();
+        //text.text = text.text.ToLower();
         isPartOfWord = false;
     }
 
