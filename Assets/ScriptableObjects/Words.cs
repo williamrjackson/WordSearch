@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WordList", menuName = "ScriptableObjects/WordList", order = 1)]
 public class Words : ScriptableObject
 {
-    public Word[] words;
+    public Word[] words = new Word[16];
 
     [System.Serializable]
     public class Word

@@ -16,7 +16,21 @@ public class BoardManager : MonoBehaviour
     public Curtain curtain;
 
     private int currentWordlistIndex = 0;
+    private Words currentWordList;
     private List<LetterUnit> letterUnits = new List<LetterUnit>();
+
+    public Words CurrentWordList
+    {
+        get
+        {
+            return currentWordList;
+        }
+        set
+        {
+            currentWordList = value;
+            StartCoroutine(BuildBoard());
+        }
+    }
 
     private enum Direction { Up, Down, Back, Forward, DiagUpForward, DiagUpBack, DiagDownForward, DiagDownBack}
     private Direction[] allDirections =
@@ -40,7 +54,8 @@ public class BoardManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(BuildBoard(wordLists[currentWordlistIndex]));
+        currentWordList = wordLists[currentWordlistIndex];
+        StartCoroutine(BuildBoard());
     }
 
     void ClearLetterUnits()
@@ -51,7 +66,7 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    IEnumerator BuildBoard(Words wordList)
+    IEnumerator BuildBoard()
     {
         if (!curtain.IsVisible)
         {
@@ -86,11 +101,11 @@ public class BoardManager : MonoBehaviour
         }
         gridLayout.columns = columns;
 
-        wordReference.Populate(wordList);
+        wordReference.Populate(currentWordList);
 
         Wrj.Utils.DeferPostFrame(() =>
         {
-            foreach (Words.Word item in wordList.words)
+            foreach (Words.Word item in currentWordList.words)
             {
                 if (item.treatedWord.Length < Mathf.Min(columns, rows))
                 {
@@ -355,7 +370,7 @@ public class BoardManager : MonoBehaviour
     public bool CheckWord(LetterUnit a, LetterUnit b)
     {
         //Debug.Log("Checking " + a.Letter + " to " + b.Letter);
-        foreach (Words.Word word in wordLists[currentWordlistIndex].words)
+        foreach (Words.Word word in currentWordList.words)
         {
             if ((word.start == a && word.end == b) || word.end == a && word.start == b)
             {
@@ -370,12 +385,13 @@ public class BoardManager : MonoBehaviour
 
     public bool CheckForWin()
     {
-        foreach (Words.Word word in wordLists[currentWordlistIndex].words)
+        foreach (Words.Word word in currentWordList.words)
         {
             if (!word.isFound) return false;
         }
         currentWordlistIndex = (currentWordlistIndex + 1) % wordLists.Length;
-        StartCoroutine(BuildBoard(wordLists[currentWordlistIndex]));
+        currentWordList = wordLists[currentWordlistIndex];
+        StartCoroutine(BuildBoard());
         return true;
     }
 
