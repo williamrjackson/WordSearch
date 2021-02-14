@@ -52,8 +52,10 @@ public class LineManager : MonoBehaviour
         }
         else if (Input.GetMouseButton(0) && currentLine != null)
         {
-            currentLineEnd = LetterUnit.over;
-            currentLine.SetPosition(1, LetterUnit.over.lineTarget.position);
+            if (LetterUnit.over != null)
+                currentLineEnd = LetterUnit.over;
+
+            currentLine.SetPosition(1, currentLineEnd.lineTarget.position);
             if (IsValidLine())
             {
                 currentLine.gameObject.SetActive(true);

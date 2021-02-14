@@ -860,7 +860,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1479,7 +1479,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2005,7 +2005,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2685,6 +2685,7 @@ MonoBehaviour:
   letterUnitPrototype: {fileID: 2688044576324692660, guid: ad549a486ed433d4da60b72cafc322fb,
     type: 3}
   wordLists:
+  - {fileID: 11400000, guid: e6d7560302b81a140a76c063ad448897, type: 2}
   - {fileID: 11400000, guid: 8b9834557da979a44a8cc006c5c3bf37, type: 2}
   - {fileID: 11400000, guid: 4e9367cc3d9799e459fe6910b920f5c5, type: 2}
   - {fileID: 11400000, guid: be41ffad7f72ae441a44e96bb612e930, type: 2}
@@ -3376,7 +3377,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4294,7 +4295,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4570,7 +4571,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 3.0092666e-36, y: 1.009742e-28, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 2.353e-42, y: 1.01e-43, z: 980710.94, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -4671,7 +4672,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6041,7 +6042,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 125.75, y: 12.575}
+  m_CellSize: {x: 116.25, y: 11.625}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -6434,7 +6435,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7887,7 +7888,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8079,7 +8080,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8988,7 +8989,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9220,7 +9221,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9375,7 +9376,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9823,7 +9824,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10206,7 +10207,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10794,7 +10795,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.25
+  m_fontSize: 10.4
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1

@@ -10,70 +10,70 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0d15a3d4965c8541926a7c8961180fe, type: 3}
-  m_Name: MCUWordList
+  m_Name: DuckTalesWordList
   m_EditorClassIdentifier: 
   words:
-  - word: Marvel
+  - word: Hubert
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Hulk
+  - word: Dewford
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Stark
+  - word: Llewellyn
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Cap
+  - word: Scrooge
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Ant Man
+  - word: Webigail
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Thor
+  - word: Launchpad
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Scarlet
+  - word: Gizmo Duck
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Widow
+  - word: B.O.Y.D.
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Spider-Man
+  - word: Glomgold
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Hawkeye
+  - word: Violet
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Fury
+  - word: Lena
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Falcon
+  - word: Magica
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Vision
+  - word: Della
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: T'Challa
+  - word: Donald
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Strange
+  - word: Darkwing
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Star-Lord
+  - word: Dooface
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
