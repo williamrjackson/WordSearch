@@ -18,7 +18,6 @@ public class BoardManager : MonoBehaviour
     public AnimationCurve scaleCurve;
 
     public UnityAction OnBoardCompletion;
-
     private Words currentWordList;
     private List<LetterUnit> letterUnits = new List<LetterUnit>();
 
@@ -36,6 +35,7 @@ public class BoardManager : MonoBehaviour
     }
 
     private enum Direction { Up, Down, Back, Forward, DiagUpForward, DiagUpBack, DiagDownForward, DiagDownBack}
+    
     private Direction[] allDirections =
     {
         Direction.Up,
@@ -52,7 +52,7 @@ public class BoardManager : MonoBehaviour
         Direction.Down,
         Direction.Forward,
         Direction.DiagUpForward,
-        Direction.DiagDownForward,
+        Direction.DiagDownForward
     };
 
     // private void Start()
@@ -112,7 +112,7 @@ public class BoardManager : MonoBehaviour
         while (successfullyAddedWords < currentWordList.words.Length)
         {
             successfullyAddedWords = 0;
-            Debug.Log($"Building {currentWordList.name}");
+            // Debug.Log($"Building {currentWordList.name}");
             
             foreach (LetterUnit letter in letterUnits)
             {
@@ -155,10 +155,13 @@ public class BoardManager : MonoBehaviour
     }
 
     private LetterUnit GetLetterGridIndex(int column, int row)
-    {
+    {   
+        if (column < 0 || column > columns - 1 ||
+            row    < 0 || row    > rows    - 1)
+        {
+            return null;
+        }
         int unitIndex = (columns * row) + column;
-        //Debug.Log("Getting letter [" + column + "][" + row + "]");
-        //Debug.Log(unitIndex);
         return letterUnits[unitIndex];
     }
 
@@ -172,9 +175,21 @@ public class BoardManager : MonoBehaviour
         {
             case Direction.Up:
                 {
+                    // Don't allow side by side things. 
+                    // Check for 3 neighbors in the same word
+                    int leftNeighborCount = 0;
+                    int rightNeighborCount = 0;
                     for (int i = 0; i < word.treatedWord.Length; i++)
                     {
                         var replaceLetter = GetLetterGridIndex(x, y);
+                        var leftNeighbor = GetLetterGridIndex(x - 1, y);
+                        var rightNeighbor = GetLetterGridIndex(x + 1, y);
+                        if (leftNeighbor != null && leftNeighbor.isPartOfWord) leftNeighborCount++;
+                        if (rightNeighbor != null && rightNeighbor.isPartOfWord) rightNeighborCount++;
+                        if (leftNeighborCount > 3 || rightNeighborCount > 3)
+                        {
+                            return false;
+                        }
                         if (replaceLetter.isPartOfWord && replaceLetter.Letter != word.treatedWord[i])
                         {
                             return false;
@@ -194,9 +209,19 @@ public class BoardManager : MonoBehaviour
                 }
             case Direction.Down:
                 {
+                    int leftNeighborCount = 0;
+                    int rightNeighborCount = 0;
                     for (int i = 0; i < word.treatedWord.Length; i++)
                     {
                         var replaceLetter = GetLetterGridIndex(x, y);
+                        var leftNeighbor = GetLetterGridIndex(x - 1, y);
+                        var rightNeighbor = GetLetterGridIndex(x + 1, y);
+                        if (leftNeighbor != null && leftNeighbor.isPartOfWord) leftNeighborCount++;
+                        if (rightNeighbor != null && rightNeighbor.isPartOfWord) rightNeighborCount++;
+                        if (leftNeighborCount > 3 || rightNeighborCount > 3)
+                        {
+                            return false;
+                        }
                         if (replaceLetter.isPartOfWord && replaceLetter.Letter != word.treatedWord[i])
                         {
                             return false;
@@ -216,9 +241,19 @@ public class BoardManager : MonoBehaviour
                 }
             case Direction.Back:
                 {
+                    int topNeighborCount = 0;
+                    int bottomNeighborCount = 0;
                     for (int i = 0; i < word.treatedWord.Length; i++)
                     {
                         var replaceLetter = GetLetterGridIndex(x, y);
+                        var topNeighbor = GetLetterGridIndex(x, y - 1);
+                        var bottomNeighbor = GetLetterGridIndex(x, y + 1);
+                        if (topNeighbor != null && topNeighbor.isPartOfWord) topNeighborCount++;
+                        if (bottomNeighbor != null && bottomNeighbor.isPartOfWord) bottomNeighborCount++;
+                        if (topNeighborCount > 3 || bottomNeighborCount > 3)
+                        {
+                            return false;
+                        }
                         if (replaceLetter.isPartOfWord && replaceLetter.Letter != word.treatedWord[i])
                         {
                             return false;
@@ -238,9 +273,19 @@ public class BoardManager : MonoBehaviour
                 }
             case Direction.Forward:
                 {
+                    int topNeighborCount = 0;
+                    int bottomNeighborCount = 0;
                     for (int i = 0; i < word.treatedWord.Length; i++)
                     {
                         var replaceLetter = GetLetterGridIndex(x, y);
+                        var topNeighbor = GetLetterGridIndex(x, y - 1);
+                        var bottomNeighbor = GetLetterGridIndex(x, y + 1);
+                        if (topNeighbor != null && topNeighbor.isPartOfWord) topNeighborCount++;
+                        if (bottomNeighbor != null && bottomNeighbor.isPartOfWord) bottomNeighborCount++;
+                        if (topNeighborCount > 3 || bottomNeighborCount > 3)
+                        {
+                            return false;
+                        }
                         if (replaceLetter.isPartOfWord && replaceLetter.Letter != word.treatedWord[i])
                         {
                             return false;
@@ -260,9 +305,19 @@ public class BoardManager : MonoBehaviour
                 }
             case Direction.DiagUpForward:
                 {
+                    int leftNeighborCount = 0;
+                    int rightNeighborCount = 0;
                     for (int i = 0; i < word.treatedWord.Length; i++)
                     {
                         var replaceLetter = GetLetterGridIndex(x, y);
+                        var leftNeighbor = GetLetterGridIndex(x - 1, y);
+                        var rightNeighbor = GetLetterGridIndex(x + 1, y);
+                        if (leftNeighbor != null && leftNeighbor.isPartOfWord) leftNeighborCount++;
+                        if (rightNeighbor != null && rightNeighbor.isPartOfWord) rightNeighborCount++;
+                        if (leftNeighborCount > 3 || rightNeighborCount > 3)
+                        {
+                            return false;
+                        }
                         if (replaceLetter.isPartOfWord && replaceLetter.Letter != word.treatedWord[i])
                         {
                             return false;
@@ -283,9 +338,19 @@ public class BoardManager : MonoBehaviour
                 }
             case Direction.DiagUpBack:
                 {
+                    int leftNeighborCount = 0;
+                    int rightNeighborCount = 0;
                     for (int i = 0; i < word.treatedWord.Length; i++)
                     {
                         var replaceLetter = GetLetterGridIndex(x, y);
+                        var leftNeighbor = GetLetterGridIndex(x - 1, y);
+                        var rightNeighbor = GetLetterGridIndex(x + 1, y);
+                        if (leftNeighbor != null && leftNeighbor.isPartOfWord) leftNeighborCount++;
+                        if (rightNeighbor != null && rightNeighbor.isPartOfWord) rightNeighborCount++;
+                        if (leftNeighborCount > 3 || rightNeighborCount > 3)
+                        {
+                            return false;
+                        }
                         if (replaceLetter.isPartOfWord && replaceLetter.Letter != word.treatedWord[i])
                         {
                             return false;
@@ -306,9 +371,19 @@ public class BoardManager : MonoBehaviour
                 }
             case Direction.DiagDownForward:
                 {
+                    int topNeighborCount = 0;
+                    int bottomNeighborCount = 0;
                     for (int i = 0; i < word.treatedWord.Length; i++)
                     {
                         var replaceLetter = GetLetterGridIndex(x, y);
+                        var topNeighbor = GetLetterGridIndex(x, y - 1);
+                        var bottomNeighbor = GetLetterGridIndex(x, y + 1);
+                        if (topNeighbor != null && topNeighbor.isPartOfWord) topNeighborCount++;
+                        if (bottomNeighbor != null && bottomNeighbor.isPartOfWord) bottomNeighborCount++;
+                        if (topNeighborCount > 3 || bottomNeighborCount > 3)
+                        {
+                            return false;
+                        }
                         if (replaceLetter.isPartOfWord && replaceLetter.Letter != word.treatedWord[i])
                         {
                             return false;
@@ -329,9 +404,19 @@ public class BoardManager : MonoBehaviour
                 }
             case Direction.DiagDownBack:
                 {
+                    int topNeighborCount = 0;
+                    int bottomNeighborCount = 0;
                     for (int i = 0; i < word.treatedWord.Length; i++)
                     {
                         var replaceLetter = GetLetterGridIndex(x, y);
+                        var topNeighbor = GetLetterGridIndex(x, y - 1);
+                        var bottomNeighbor = GetLetterGridIndex(x, y + 1);
+                        if (topNeighbor != null && topNeighbor.isPartOfWord) topNeighborCount++;
+                        if (bottomNeighbor != null && bottomNeighbor.isPartOfWord) bottomNeighborCount++;
+                        if (topNeighborCount > 3 || bottomNeighborCount > 3)
+                        {
+                            return false;
+                        }
                         if (replaceLetter.isPartOfWord && replaceLetter.Letter != word.treatedWord[i])
                         {
                             return false;
@@ -377,50 +462,50 @@ public class BoardManager : MonoBehaviour
         {
             case Direction.Up:
             {
-                startRow = Random.Range(word.treatedWord.Length + 1, rows);
+                startRow = Random.Range(word.treatedWord.Length - 1, rows);
                 startColumn = Random.Range(0, columns);
                 break;
             }
             case Direction.Down:
             {
-                startRow = Random.Range(0, rows - word.treatedWord.Length + 1);
+                startRow = Random.Range(0, rows - word.treatedWord.Length);
                 startColumn = Random.Range(0, columns);
                 break;
             }
             case Direction.Back:
             {
                 startRow = Random.Range(0, rows);
-                startColumn = Random.Range(word.treatedWord.Length + 1, columns);
+                startColumn = Random.Range(word.treatedWord.Length - 1, columns);
                 break;
             }
             case Direction.Forward:
             {
                 startRow = Random.Range(0, rows);
-                startColumn = Random.Range(0, columns - word.treatedWord.Length + 1);
+                startColumn = Random.Range(0, columns - word.treatedWord.Length);
                 break;
             }
             case Direction.DiagUpForward:
             {
-                startRow = Random.Range(rows - word.treatedWord.Length + 1, rows);
-                startColumn = Random.Range(0, columns - word.treatedWord.Length + 1);
+                startRow = Random.Range(word.treatedWord.Length - 1, rows);
+                startColumn = Random.Range(0, columns - word.treatedWord.Length);
                 break;
             }
             case Direction.DiagUpBack:
             {
-                startRow = Random.Range(word.treatedWord.Length + 1, rows);
-                startColumn = Random.Range(columns - word.treatedWord.Length + 1, columns);
+                startRow = Random.Range(word.treatedWord.Length - 1, rows);
+                startColumn = Random.Range(word.treatedWord.Length - 1, columns);
                 break;
             }
             case Direction.DiagDownForward:
             {
-                startRow = Random.Range(0, rows - word.treatedWord.Length + 1);
-                startColumn = Random.Range(0, columns - word.treatedWord.Length + 1);
+                startRow = Random.Range(0, (rows - word.treatedWord.Length) + 1);
+                startColumn = Random.Range(0, columns - (word.treatedWord.Length) + 1);
                 break;
             }
             case Direction.DiagDownBack:
             {
-                startRow = Random.Range(0, rows - word.treatedWord.Length + 1);
-                startColumn = Random.Range(columns - word.treatedWord.Length + 1, columns);
+                startRow = Random.Range(0, (rows - word.treatedWord.Length) + 1);
+                startColumn = Random.Range(word.treatedWord.Length - 1, columns);
                 break;
             }
             default:
