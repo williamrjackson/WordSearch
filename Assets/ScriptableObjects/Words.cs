@@ -10,11 +10,25 @@ public class Words : ScriptableObject
     {
         public string word;
         [HideInInspector]
-        public LetterUnit start;
-        [HideInInspector]
-        public LetterUnit end;
+        public LetterUnit[] letterUnits;
         [HideInInspector]
         public bool isFound = false;
+        public LetterUnit StartUnit
+        {
+            get
+            {
+                if (letterUnits.Length < 1) return null;
+                return letterUnits[0];
+            }
+        }
+        public LetterUnit EndUnit
+        {
+            get
+            {
+                if (letterUnits.Length < 1) return null;
+                return letterUnits[letterUnits.Length - 1];
+            }
+        }
         public string treatedWord
         {
             get 
@@ -32,12 +46,11 @@ public class Words : ScriptableObject
             }
 
         }
-        public void SetRange(LetterUnit start, LetterUnit end)
+        public void SetRange(LetterUnit[] letters)
         {
             this.isFound = false;
-            //Debug.Log("Setting " + word + " to " + start.Letter + " - " + end.Letter);
-            this.start = start;
-            this.end = end;
+            letterUnits = letters;
+            //Debug.Log("Setting " + word + " to " + StartUnit.Letter + " - " + EndUnit.Letter);
         }
     }
 }

@@ -7,6 +7,7 @@ public class LineManager : MonoBehaviour
     public LineRenderer linePrototype;
     public BoardManager board;
     public Color[] colors;
+    public bool showUnsnappedLine = true;
     private LetterUnit currentLineStart;
     private LetterUnit currentLineEnd;
     private LineRenderer currentLine;
@@ -56,14 +57,22 @@ public class LineManager : MonoBehaviour
                 currentLineEnd = LetterUnit.over;
 
             currentLine.SetPosition(1, currentLineEnd.lineTarget.position);
+
             if (IsValidLine())
             {
                 currentLine.gameObject.SetActive(true);
             }
-            else
+            else if (!showUnsnappedLine)
             {
                 currentLine.gameObject.SetActive(false);
             }
+            else
+            {
+                currentLine.gameObject.SetActive(true);
+                Vector3 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).With(z: currentLineStart.lineTarget.position.z);
+                currentLine.SetPosition(1, targetPos);
+            }
+
         }
         else if (Input.GetMouseButtonUp(0) && currentLine != null)
         {

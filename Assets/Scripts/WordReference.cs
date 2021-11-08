@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class WordReference : MonoBehaviour
 {
@@ -11,11 +12,13 @@ public class WordReference : MonoBehaviour
     {
         for (int i = 0; i < textList.Count; i++)
         {
+            HintBehavior hintBehavior = textList[i].EnsureComponent<HintBehavior>();
             textList[i].fontStyle = FontStyles.Normal;
             textList[i].faceColor = Color.white;
             if (i < wordlist.words.Length)
             {
                 textList[i].text = wordlist.words[i].word;
+                hintBehavior.word = wordlist.words[i];
             }
             else
             {
@@ -33,5 +36,9 @@ public class WordReference : MonoBehaviour
                 item.faceColor = Color.gray;
             }
         }
+    }
+    private void AlertHintClick(string word)
+    {
+        Debug.Log($"TEST: {word}");
     }
 }

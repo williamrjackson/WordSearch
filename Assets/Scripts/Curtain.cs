@@ -34,10 +34,12 @@ public class Curtain : MonoBehaviour
             m_IsVisible = value;
             if (m_IsVisible)
             {
+                m_CurtainPanel.raycastTarget = true;
                 m_CurtainPanel.transform.Alpha(1f, duration);
             }
             else
             {
+                m_CurtainPanel.raycastTarget = false;
                 m_CurtainPanel.transform.Alpha(0f, duration);
             }
         }

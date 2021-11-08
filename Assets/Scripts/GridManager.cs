@@ -7,12 +7,18 @@ using UnityEngine.UI;
 [ExecuteInEditMode]
 public class GridManager : MonoBehaviour
 {
+    [SerializeField]
+    private float cellXScale = .1f;
+    [SerializeField]
+    private float cellYScale = 1f;
+    private RectTransform rect;
+    private GridLayoutGroup grid;
     void Update()
     {
-        RectTransform rect = GetComponent<RectTransform>();
-        GridLayoutGroup grid = GetComponent<GridLayoutGroup>();
+        rect ??= GetComponent<RectTransform>();
+        grid ??= GetComponent<GridLayoutGroup>();
 
         float width = rect.rect.width / 4f;
-        grid.cellSize = new Vector2(width, width * .1f);
+        grid.cellSize = new Vector2(width * cellYScale, width * cellXScale);
     }
 }

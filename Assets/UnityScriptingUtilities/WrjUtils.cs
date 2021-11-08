@@ -882,6 +882,7 @@ namespace Wrj
                     {
                         color.a = Lerp(from, to, scrubPos);
                     }
+                    Debug.Log(color.a);
                     mat.SetColor("_Color", color);
                 }
                 Color finalColor = mat.GetColor("_Color");

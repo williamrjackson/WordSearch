@@ -10,38 +10,70 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0d15a3d4965c8541926a7c8961180fe, type: 3}
-  m_Name: HildaWordList
+  m_Name: DuckTales
   m_EditorClassIdentifier: 
   words:
-  - word: Hilda
+  - word: Hubert
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Twig
+  - word: Dewford
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Alfur
+  - word: Llewellyn
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Frida
+  - word: Scrooge
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: David
+  - word: Webigail
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Trolburg
+  - word: Launchpad
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0
-  - word: Tide Mice
+  - word: Gizmo Duck
     start: {fileID: 0}
     end: {fileID: 0}
-    isFound: 1
-  - word: Wood Man
+    isFound: 0
+  - word: B.O.Y.D.
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 0
+  - word: Glomgold
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 0
+  - word: Violet
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 0
+  - word: Lena
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 0
+  - word: Magica
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 0
+  - word: Della
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 0
+  - word: Donald
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 0
+  - word: Darkwing
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 0
+  - word: Dooface
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 0

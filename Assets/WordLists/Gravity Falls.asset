@@ -10,62 +10,70 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0d15a3d4965c8541926a7c8961180fe, type: 3}
-  m_Name: SheraWordList
+  m_Name: Gravity Falls
   m_EditorClassIdentifier: 
   words:
-  - word: She-Ra
+  - word: Dipper
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1
-  - word: Scorpia
+  - word: Waddles
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1
-  - word: Catra
+  - word: Journal
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1
-  - word: Entrapta
+  - word: Bill
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1
-  - word: Glimmer
+  - word: Mabel
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1
-  - word: Mermista
+  - word: Soos
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1
-  - word: Hordak
+  - word: Wendy
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1
-  - word: Bow
+  - word: Gruncle
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1
-  - word: Perfuma
+  - word: Stanford
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1
-  - word: Frosta
+  - word: Gideon
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1
-  - word: Huntara
+  - word: Blendin
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1
-  - word: Adora
+  - word: Cipher
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1
-  - word: Razz
+  - word: Pacifica
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1
-  - word: Angella
+  - word: Fiddleford
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Shmebulock
+    start: {fileID: 0}
+    end: {fileID: 0}
+    isFound: 1
+  - word: Grenda
     start: {fileID: 0}
     end: {fileID: 0}
     isFound: 1

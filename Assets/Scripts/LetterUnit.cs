@@ -7,6 +7,7 @@ public class LetterUnit : MonoBehaviour
 {
     public TextMeshPro text;
     public Transform lineTarget;
+    public Transform hintTargetPosition;
     public int column;
     public int row;
     public bool isPartOfWord = false;
@@ -29,8 +30,11 @@ public class LetterUnit : MonoBehaviour
     private char _letter;
     void Start()
     {
+        Reset();
+    }
+    public void Reset()
+    {
         Letter = Alphabet.ToCharArray().GetRandom();
-        //text.text = text.text.ToLower();
         isPartOfWord = false;
     }
 
