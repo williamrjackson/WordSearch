@@ -18,6 +18,7 @@ public class BoardManager : MonoBehaviour
     public AnimationCurve scaleCurve;
 
     public UnityAction OnBoardCompletion;
+
     private Words currentWordList;
     private List<LetterUnit> letterUnits = new List<LetterUnit>();
 

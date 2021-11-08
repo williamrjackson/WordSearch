@@ -24,7 +24,15 @@ public class WordListCreatorPan : MonoBehaviour
                 List<InputField> fields = new List<InputField>(inputFields);
                 if (fields.Contains(selectedField))
                 {
-                    int nextIndex = (fields.IndexOf(selectedField) + 1) % fields.Count;
+                    int nextIndex = fields.IndexOf(selectedField);
+                    if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+                    {
+                        nextIndex = (nextIndex + fields.Count - 1) % fields.Count;
+                    }
+                    else
+                    {
+                        nextIndex = (nextIndex + 1) % fields.Count;
+                    }
                     fields[nextIndex].Select();
                 }
             }
@@ -34,7 +42,7 @@ public class WordListCreatorPan : MonoBehaviour
     void OnEnable()
     {
         if (inputFields.Length < 1) return;
-
+        int characterLimit = Mathf.Max(boardManager.columns, boardManager.rows) - 1;
         for (int i = 0; i < inputFields.Length; i++)
         {
             if (boardManager.CurrentWordList.words.Length > i)
@@ -45,6 +53,7 @@ public class WordListCreatorPan : MonoBehaviour
             {
                 inputFields[i].text = string.Empty;
             }
+            inputFields[i].characterLimit = characterLimit;
             changeCheck[i] = inputFields[i].text;
         }
         inputFields[0].Select();
