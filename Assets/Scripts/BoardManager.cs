@@ -20,7 +20,7 @@ public class BoardManager : MonoBehaviour
     public UnityAction OnBoardCompletion;
     private Words currentWordList;
     private List<LetterUnit> letterUnits = new List<LetterUnit>();
-
+    private Coroutine boardRoutine;
     public Words CurrentWordList
     {
         get
@@ -30,10 +30,25 @@ public class BoardManager : MonoBehaviour
         set
         {
             currentWordList = value;
-            StartCoroutine(BuildBoard());
+            if (boardRoutine != null)
+            {
+                StopCoroutine(boardRoutine);
+            }
+            boardRoutine = StartCoroutine(BuildBoard());
         }
     }
 
+    public void AllowBackwards(string allow)
+    {
+        if (allow.ToLower() == "false")
+        {
+            allowBackwards = false;
+        }
+        else
+        {
+            allowBackwards = true;
+        }
+    }
     private enum Direction { Up, Down, Back, Forward, DiagUpForward, DiagUpBack, DiagDownForward, DiagDownBack}
     
     private Direction[] allDirections =
@@ -71,6 +86,7 @@ public class BoardManager : MonoBehaviour
 
     IEnumerator BuildBoard()
     {
+        Debug.Log("Build");
         if (!curtain.IsVisible)
         {
             curtain.IsVisible = true;
@@ -112,8 +128,7 @@ public class BoardManager : MonoBehaviour
         while (successfullyAddedWords < currentWordList.words.Length)
         {
             successfullyAddedWords = 0;
-            // Debug.Log($"Building {currentWordList.name}");
-            
+            Debug.Log("Resetting letters");
             foreach (LetterUnit letter in letterUnits)
             {
                 letter.Reset();
@@ -124,9 +139,13 @@ public class BoardManager : MonoBehaviour
                 if (item.treatedWord.Length < Mathf.Min(columns, rows))
                 {
                     if (AddWord(item))
+                    {
+                        Debug.Log($"Added {item.word}");
                         successfullyAddedWords++;
+                    }
                 }
             }
+            boardRoutine = null;
         }
                 
         int size = Mathf.Max(columns, rows);

@@ -9,9 +9,37 @@ public class WordListCreatorPan : MonoBehaviour
     public BoardManager boardManager;
     public InputField[] inputFields;
     public Words workingWords;
-
+    public WordListLoader wordListLoader;
 
     private string[] changeCheck = new string[16];
+
+    public void FillWorkingWords(string[] newWords)
+    {
+        bool shouldRefreshWords = false;
+        for (int i = 0; i < workingWords.words.Length; i++)
+        {
+            if (newWords.Length > i)
+            {
+                workingWords.words[i].word = newWords[i];
+                shouldRefreshWords = true;
+            }
+            else
+            {
+                workingWords.words[i].word = string.Empty;
+            }
+        }
+        if (shouldRefreshWords)
+        {
+            wordListLoader.LoadOnStart = false;
+            boardManager.CurrentWordList = workingWords;
+        }
+    }
+    public void FillCommaSeparatedWords(string commaSeparated)
+    {
+        Debug.Log($"Loading {commaSeparated}");
+        var words = commaSeparated.Split(',');
+        FillWorkingWords(words);
+    }
 
     private void Update()
     {
@@ -70,7 +98,9 @@ public class WordListCreatorPan : MonoBehaviour
         }
 
         if (shouldRefreshWords)
+        {
             boardManager.CurrentWordList = workingWords;
+        }
     }
 
 }

@@ -2762,6 +2762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropdown: {fileID: 455973482}
   board: {fileID: 470140839}
+  _loadOnStart: 1
 --- !u!114 &455973482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2864,6 +2865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 470140840}
   - component: {fileID: 470140839}
+  - component: {fileID: 470140841}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -2939,6 +2941,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &470140841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470140838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3213c80c4c1f57d41bacbf4f63a2ea00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  queryStrings:
+  - queryString: AllowBackwards
+    action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 470140839}
+          m_TargetAssemblyTypeName: BoardManager, Assembly-CSharp
+          m_MethodName: AllowBackwards
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - queryString: wordlist
+    action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1169235514}
+          m_TargetAssemblyTypeName: WordListCreatorPan, Assembly-CSharp
+          m_MethodName: FillCommaSeparatedWords
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &494930356
 GameObject:
   m_ObjectHideFlags: 0
@@ -7074,6 +7121,7 @@ MonoBehaviour:
   - {fileID: 1456392692}
   - {fileID: 893995347}
   workingWords: {fileID: 11400000, guid: 1848c735076c57b4da4f4e672f086711, type: 2}
+  wordListLoader: {fileID: 455973481}
 --- !u!1 &1174009632
 GameObject:
   m_ObjectHideFlags: 0

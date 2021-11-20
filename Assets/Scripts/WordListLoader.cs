@@ -7,6 +7,8 @@ public class WordListLoader : MonoBehaviour
 {
     public TMP_Dropdown dropdown;
     public BoardManager board;
+    [SerializeField]
+    bool _loadOnStart = true;
     private string _directory = Application.streamingAssetsPath;
     private Dictionary<int, Words> _wordlistMap = new Dictionary<int, Words>();
     private Coroutine _autoLoadRoutine;
@@ -22,10 +24,19 @@ public class WordListLoader : MonoBehaviour
             wordListNames.Add(board.wordLists[i].name);
             _wordlistMap.Add(i, board.wordLists[i]);
         }
-
         dropdown.AddOptions(wordListNames);
+
         dropdown.value = 0;
-        WordListChanged(0);
+        if (_loadOnStart)
+        {
+            WordListChanged(0);
+        }
+    }
+
+    public bool LoadOnStart
+    {
+        get => _loadOnStart;
+        set => _loadOnStart = value;
     }
 
     private void BoardCompleted()
