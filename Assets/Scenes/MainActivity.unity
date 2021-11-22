@@ -2761,6 +2761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropdown: {fileID: 455973482}
+  wordListCreatorPanel: {fileID: 1169235514}
   board: {fileID: 470140839}
   _loadOnStart: 1
 --- !u!114 &455973482
@@ -5128,7 +5129,6 @@ LineRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 681152ec65d504947b7f99dc6b000f5b, type: 2}
-  - {fileID: 2100000, guid: 451906098113c064eb1d8ac12bde5dac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

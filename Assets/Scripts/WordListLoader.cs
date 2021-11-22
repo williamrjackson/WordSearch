@@ -6,6 +6,7 @@ using System.Collections;
 public class WordListLoader : MonoBehaviour
 {
     public TMP_Dropdown dropdown;
+    public WordListCreatorPan wordListCreatorPanel;
     public BoardManager board;
     [SerializeField]
     bool _loadOnStart = true;
@@ -24,6 +25,7 @@ public class WordListLoader : MonoBehaviour
             wordListNames.Add(board.wordLists[i].name);
             _wordlistMap.Add(i, board.wordLists[i]);
         }
+        wordListNames.Add("Random Words");
         dropdown.AddOptions(wordListNames);
 
         dropdown.value = 0;
@@ -60,6 +62,24 @@ public class WordListLoader : MonoBehaviour
             StopCoroutine(_autoLoadRoutine);
             _autoLoadRoutine = null;
         }
-        board.CurrentWordList = _wordlistMap[index];
+        if (_wordlistMap.ContainsKey(index))
+        {
+            board.CurrentWordList = _wordlistMap[index];
+        }
+        else
+        {
+            LoadRandomWords();
+        }
+    }
+    private void LoadRandomWords()
+    {
+        Wrj.WordList.Instance.Init(Wrj.WordList.WordSource.Common1000);
+        var words = Wrj.WordList.GetRandomWords(16, 5, 8);
+        string[] workingWords = words.ToArray();
+        for (int i = 0; i < workingWords.Length; i++)
+        {
+            workingWords[i] = workingWords[i].Capitalize();
+        }
+        wordListCreatorPanel.FillWorkingWords(workingWords);
     }
 }
