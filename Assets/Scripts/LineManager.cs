@@ -78,7 +78,7 @@ public class LineManager : MonoBehaviour
         {
             if (!board.CheckWord(currentLineStart, currentLineEnd))
             {
-                Destroy(currentLine);
+                Destroy(currentLine.gameObject);
             }
             else
             {
