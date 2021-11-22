@@ -18,6 +18,7 @@ public class BoardManager : MonoBehaviour
     public AnimationCurve scaleCurve;
 
     public UnityAction OnBoardCompletion;
+    public CollectWordParticles _collectParticles;
     private Words currentWordList;
     private List<LetterUnit> letterUnits = new List<LetterUnit>();
     private Coroutine boardRoutine;
@@ -553,6 +554,7 @@ public class BoardManager : MonoBehaviour
                 //Debug.Log(word.word + " FOUND!");
                 wordReference.Strike(word.word);
                 word.isFound = true;
+                _collectParticles.CollectWord(word);
                 return true;
             }
         }
