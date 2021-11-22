@@ -618,7 +618,7 @@ public class BoardManager : MonoBehaviour
         // currentWordlistIndex = (currentWordlistIndex + 1) % wordLists.Length;
         // currentWordList = wordLists[currentWordlistIndex];
         // StartCoroutine(BuildBoard());
-
+        curtain.RandomSuperlative();
         return true;
     }
 
