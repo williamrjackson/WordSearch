@@ -13,6 +13,12 @@ public class HintBehavior : MonoBehaviour
     private Button _button;
     private BoardManager _board;
     private static Coroutine hintCoroutine;
+    private bool _allowHints = true;
+    public bool AllowHints 
+    {
+        get => _allowHints;
+        set => _allowHints = value;
+    }
     private void OnEnable()
     {
         _board ??= FindObjectOfType<BoardManager>();
@@ -28,7 +34,7 @@ public class HintBehavior : MonoBehaviour
     }
     public IEnumerator PerformHint()
     {
-        if (_button == null || word == null || _trail == null)
+        if (!_allowHints || _button == null || word == null || _trail == null)
             yield break;
         // Debug.Log($"Hint for {word.word}");
         _trail.enabled = false;

@@ -13,7 +13,7 @@ public class QueryStringParser : MonoBehaviour
     {
 #if UNITY_WEBGL
         string url = Application.absoluteURL;
-        // string url = "www.test.com?AllowBackwards=false&WordList=Use,Fast,Pull,Both,Sit,Which,Read,Why,Found,Because,Best,Upon,These,Sing,Wish";
+        // string url = "www.test.com?AllowBackwards=false&WordList=Up,In,On,Oh";
         var splitUrl = url.Split(new[] { '?' }, 2);
         if (splitUrl.Length > 1)
         {
@@ -26,17 +26,27 @@ public class QueryStringParser : MonoBehaviour
                     if (item.ToString().ToLower() == qs.queryString.ToLower())
                     {
                         qs.action.Invoke(results[item.ToString()]);
+                        qs.option.Invoke(ToBool(results[item.ToString()]));
                     }
                 }
             }
         }
 #endif
     }
-
+    
+    public bool ToBool(string switchStr)
+    {
+        if (switchStr.ToLower().Trim() == "true")
+        {
+            return true;
+        }
+        return false;
+    }
     [System.Serializable]
     public class QueryStringCommand
     {
         public string queryString;
         public UnityEvent<string> action;
+        public UnityEvent<bool> option;
     }
 }

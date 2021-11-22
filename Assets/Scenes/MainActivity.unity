@@ -2970,6 +2970,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    option:
+      m_PersistentCalls:
+        m_Calls: []
   - queryString: wordlist
     action:
       m_PersistentCalls:
@@ -2977,6 +2980,28 @@ MonoBehaviour:
         - m_Target: {fileID: 1169235514}
           m_TargetAssemblyTypeName: WordListCreatorPan, Assembly-CSharp
           m_MethodName: FillCommaSeparatedWords
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    option:
+      m_PersistentCalls:
+        m_Calls: []
+  - queryString: EnableHints
+    action:
+      m_PersistentCalls:
+        m_Calls: []
+    option:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 990506475}
+          m_TargetAssemblyTypeName: HintBehavior, Assembly-CSharp
+          m_MethodName: set_AllowHints
           m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

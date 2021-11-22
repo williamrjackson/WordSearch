@@ -556,13 +556,61 @@ public class BoardManager : MonoBehaviour
                 return true;
             }
         }
-        return false;
+        Words.Word unexpectedMatch = MatchExistingFromStartEnd(a, b);
+        if (unexpectedMatch == null)
+        {
+            return false;
+        }
+        else
+        {
+            wordReference.Strike(unexpectedMatch.word);
+            unexpectedMatch.isFound = true;
+            return true;
+        }
+    }
+
+    private Words.Word MatchExistingFromStartEnd(LetterUnit start, LetterUnit end)
+    {
+        string res = "";
+        int row = start.row;
+        int col = start.column;
+        List<LetterUnit> letters = new List<LetterUnit>();
+        LetterUnit current = start;
+        while (current != end)
+        {
+            current = GetLetterGridIndex(col, row);
+            letters.Add(current);
+            res += current.Letter;
+
+            if (current.column < end.column) col++;
+            else if (current.column > end.column) col--;
+
+            if (current.row < end.row) row++;
+            else if (current.row > end.row) row--;
+        }
+        string reverse = "";
+        
+        for (int i = res.Length - 1; i >= 0; i--)
+        {
+            reverse += res[i];
+        }
+        // Debug.Log($"{res}, {reverse}");
+        foreach (var word in currentWordList.words)
+        {
+            if (word.treatedWord == res || word.treatedWord == reverse)
+            {
+                word.letterUnits = letters.ToArray();
+                return word;
+            }
+        }
+        return null;
     }
 
     public bool CheckForWin()
     {
         foreach (Words.Word word in currentWordList.words)
         {
+            if (word.treatedWord == "") break;
             if (!word.isFound) return false;
         }
 
