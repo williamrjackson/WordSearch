@@ -43,6 +43,11 @@ public class WordListLoader : MonoBehaviour
 
     private void BoardCompleted()
     {
+        if (dropdown.value == dropdown.options.Count - 1)
+        {
+            WordListChanged(dropdown.value);
+            return;
+        }
         int currentIndex = dropdown.value;
         int nextIndex = (currentIndex + 1) % dropdown.options.Count;
         _autoLoadRoutine = StartCoroutine(AutoLoadRoutine(nextIndex));
