@@ -13,7 +13,7 @@ public class QueryStringParser : MonoBehaviour
     {
 #if UNITY_WEBGL
         string url = Application.absoluteURL;
-        // string url = "www.test.com?AllowBackwards=false&WordList=Up,In,On,Oh";
+        // string url = "www.test.com?EnableHints=true&WordList=Engagement,In,On,Oh";
         var splitUrl = url.Split(new[] { '?' }, 2);
         if (splitUrl.Length > 1)
         {

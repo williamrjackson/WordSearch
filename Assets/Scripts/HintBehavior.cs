@@ -13,11 +13,15 @@ public class HintBehavior : MonoBehaviour
     private Button _button;
     private BoardManager _board;
     private static Coroutine hintCoroutine;
-    private bool _allowHints = true;
-    public bool AllowHints 
+    private static bool _allowHints = true;
+    public static bool AllowHints 
     {
         get => _allowHints;
-        set => _allowHints = value;
+        set
+        {
+            // Debug.Log("Setting AllowHints to " + value);
+            _allowHints = value;
+        }
     }
     private void OnEnable()
     {
