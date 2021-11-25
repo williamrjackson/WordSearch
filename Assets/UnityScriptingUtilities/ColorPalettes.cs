@@ -70,7 +70,7 @@ namespace Wrj
             Color[] results = new Color[3];
             results[0] = Color.HSVToRGB(h, Mathf.Clamp01(s - .1f), Mathf.Clamp01(v - .2f));
             results[1] = color;
-            results[3] = Color.HSVToRGB(h, Mathf.Clamp01(s + .1f), Mathf.Clamp01(v + .2f));
+            results[2] = Color.HSVToRGB(h, Mathf.Clamp01(s + .1f), Mathf.Clamp01(v + .2f));
             return results;
         }
         /// <summary>
@@ -111,12 +111,35 @@ namespace Wrj
         public static Color Silver => new Color(0.7411765f, 0.7647059f, 0.78039217f);
         public static Color Concrete => new Color(0.58431375f, 0.64705884f, 0.6509804f);
         public static Color Asbestos => new Color(0.49803922f, 0.54901963f, 0.5529412f);
-
+        public static Color[] Colors = new[] 
+        {
+            Turquoise,
+            GreenSea,
+            Emerald,
+            Nephritis,
+            PeterRiver,
+            BelizeHole, 
+            WetAsphalt,
+            MidnightBlue,
+            SoftPink, 
+            StrongPink,
+            Amethyst,
+            Wisteria,
+            SunFlower,
+            Orange,
+            Carrot,
+            Alizarin,
+            Pomegranate,
+            Clouds,
+            Silver,
+            Concrete,
+            Asbestos
+        };
         public enum FlatGradeColor { Blue, Green, Red, Pink, Purple, Aqua, Orange, Tan, Brown, Metal, Stone, Gray }
-        public static Color Grade(FlatGradeColor flatUIColor, float grade)
+        public static Color Grade(FlatGradeColor flatGradeColor, float grade)
         {
             grade = Mathf.Clamp01(grade);
-            switch (flatUIColor)
+            switch (flatGradeColor)
             {
                 case FlatGradeColor.Blue:
                     return Color.Lerp(BlueHigh, BlueLow, grade);
@@ -171,7 +194,6 @@ namespace Wrj
         private static Color StoneLow = new Color(0.14509805f, 0.20784315f, 0.21176472f);
         private static Color GrayHigh = new Color(0.87843144f, 0.87843144f, 0.87843144f);
         private static Color GrayLow = new Color(0f, 0f, 0f);
-
     }
 
     public class ModernPalette
@@ -191,6 +213,24 @@ namespace Wrj
         public static Color CyanDark => new Color(0.24705884f, 0.3254902f, 0.3647059f);
         public static Color Purple => new Color(0.62352943f, 0.3254902f, 0.48627454f);
         public static Color PurpleDark => new Color(0.3372549f, 0.19215688f, 0.32156864f);
+        public static Color[] Colors = new[] 
+        { 
+            Red, 
+            Green, 
+            Black, 
+            BlackBlue, 
+            BlackPurple, 
+            White, 
+            Gray, 
+            GrayDark, 
+            Orange, 
+            OrangeDark, 
+            Sky, 
+            Cyan, 
+            CyanDark, 
+            Purple,
+            PurpleDark 
+        };
 
     }
 }

@@ -50,6 +50,17 @@ public class BoardManager : MonoBehaviour
             allowBackwards = true;
         }
     }
+
+    public void SetRows(int num)
+    {
+        num = Mathf.Clamp(num, 15, 30);
+        rows = num;
+    }
+    public void SetColumns(int num)
+    {
+        num = Mathf.Clamp(num, 15, 30);
+        columns = num;
+    }
     private enum Direction { Up, Down, Back, Forward, DiagUpForward, DiagUpBack, DiagDownForward, DiagDownBack}
     
     private Direction[] allDirections =

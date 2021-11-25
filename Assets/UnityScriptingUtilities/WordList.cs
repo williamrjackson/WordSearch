@@ -85,7 +85,7 @@ namespace Wrj
             for (int i = 0; i < count; i++)
             {
                 string word = "";
-                while (word.Length > maxLength || word.Length < minLength)
+                while (word.Length > maxLength || word.Length < minLength || results.Contains(word))
                 {
                     word = wordSetList[UnityEngine.Random.Range(0, wordSetList.Count)];
                 }

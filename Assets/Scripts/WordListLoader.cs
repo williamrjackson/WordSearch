@@ -78,7 +78,7 @@ public class WordListLoader : MonoBehaviour
     }
     private void LoadRandomWords()
     {
-        Wrj.WordList.Instance.Init(Wrj.WordList.WordSource.Common1000);
+        Wrj.WordList.Instance.Init(Wrj.WordList.WordSource.Common3000);
         var words = Wrj.WordList.GetRandomWords(16, 5, 8);
         string[] workingWords = words.ToArray();
         for (int i = 0; i < workingWords.Length; i++)
