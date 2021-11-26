@@ -8,6 +8,9 @@ public class LineManager : MonoBehaviour
     public BoardManager board;
     public Color[] colors;
     public bool showUnsnappedLine = true;
+
+    [SerializeField]
+    private TextureClickThrough textureClickThrough;
     private LetterUnit currentLineStart;
     private LetterUnit currentLineEnd;
     private LineRenderer currentLine;
@@ -63,7 +66,7 @@ public class LineManager : MonoBehaviour
             if (LetterUnit.over != null)
                 currentLineEnd = LetterUnit.over;
 
-            currentLine.SetPosition(1, currentLineEnd.lineTarget.position);
+            SetLineEnd(currentLineEnd.lineTarget.position);
 
             if (IsValidLine())
             {
@@ -76,8 +79,8 @@ public class LineManager : MonoBehaviour
             else
             {
                 currentLine.gameObject.SetActive(true);
-                Vector3 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).With(z: currentLineStart.lineTarget.position.z);
-                currentLine.SetPosition(1, targetPos);
+                Vector3 targetPos = textureClickThrough.RelativeMouse.With(z: currentLineStart.lineTarget.position.z);
+                SetLineEnd(targetPos);
             }
 
         }
@@ -97,6 +100,16 @@ public class LineManager : MonoBehaviour
             currentLineStart = null;
             currentLine = null;
         }
+    }
+
+    private void SetLineEnd(Vector3 point)
+    {
+        point = new Vector3(
+            Mathf.Clamp(point.x, board.TopLeft.x, board.BottomRight.x),
+            Mathf.Clamp(point.y,  board.BottomRight.y, board.TopLeft.y),
+            point.z
+        );
+        currentLine.SetPosition(1, point);
     }
 
     public void ClearLines()

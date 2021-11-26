@@ -38,15 +38,18 @@ public class LetterUnit : MonoBehaviour
         isPartOfWord = false;
     }
 
-    void OnMouseEnter()
+    public void MouseOver()
     {
         over = this;
     }
-    void OnMouseExit()
+    public static void MouseExit()
     {
-        if (over == this)
-        {
-            over = null;
-        }
+         over = null;        
     }
+    // void OnMouseExit()
+    // {
+    //     if (over == this)
+    //     {
+    //     }
+    // }
 }

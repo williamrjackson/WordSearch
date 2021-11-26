@@ -16,6 +16,8 @@ public class BoardManager : MonoBehaviour
     public bool allowBackwards;
     public Curtain curtain;
     public AnimationCurve scaleCurve;
+    public RenderTexture boardTexture;
+    public UnityEngine.UI.RawImage boardImage;
 
     public UnityAction OnBoardCompletion;
     public CollectWordParticles _collectParticles;
@@ -39,6 +41,28 @@ public class BoardManager : MonoBehaviour
         }
     }
 
+    public Vector2 BottomRight
+    {
+        get
+        {
+            if (letterUnits.Count > 0)
+            {
+                return letterUnits[letterUnits.Count - 1].transform.position.ToVector2();
+            }
+            return Vector2.zero;
+        }
+    }
+    public Vector2 TopLeft
+    {
+        get
+        {
+            if (letterUnits.Count > 0)
+            {
+                return letterUnits[0].transform.position.ToVector2();
+            }
+            return Vector2.zero;
+        }
+    }
     public void AllowBackwards(string allow)
     {
         if (allow.ToLower() == "false")
@@ -110,6 +134,9 @@ public class BoardManager : MonoBehaviour
     IEnumerator BuildBoard()
     {
         Debug.Log("Build");
+        boardTexture.width = columns * 25;
+        boardTexture.height = rows * 25;
+        boardImage.SetNativeSize();
         if (!curtain.IsVisible)
         {
             curtain.IsVisible = true;
@@ -573,6 +600,7 @@ public class BoardManager : MonoBehaviour
         {
             if ((word.StartUnit == a && word.EndUnit == b) || word.EndUnit == a && word.StartUnit == b)
             {
+                if (word.isFound) return false;
                 //Debug.Log(word.word + " FOUND!");
                 wordReference.Strike(word.word);
                 word.isFound = true;
