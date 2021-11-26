@@ -11,7 +11,8 @@ Shader "Unlit/Spine Outline Stencil"
         Tags { "Queue"="Transparent" "RenderType"="Transparent" }
         LOD 100
         ZWrite Off
-        Blend SrcAlpha OneMinusSrcAlpha
+        Blend OneMinusDstAlpha DstAlpha
+        ColorMask RGB
  
         CGINCLUDE
         #include "UnityCG.cginc"
@@ -37,6 +38,14 @@ Shader "Unlit/Spine Outline Stencil"
             return o;
         }
  
+        fixed4 fragOutlineMask (v2fOutline i) : SV_Target
+        {
+            fixed alpha = tex2D(_MainTex, i.uv).a;
+            fixed4 col = _OutlineColor;
+            col.a *= alpha;
+            return 1 - col.a;
+        }
+ 
         fixed4 fragOutline (v2fOutline i) : SV_Target
         {
             fixed alpha = tex2D(_MainTex, i.uv).a;
@@ -48,11 +57,77 @@ Shader "Unlit/Spine Outline Stencil"
  
         Pass
         {
-            Name "MASK"
-            Stencil {
-                Ref 1
-                Pass Replace
+            Name "OUTLINEALPHA"
+            BlendOp Min
+            ColorMask A
+ 
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment fragOutlineMask
+ 
+            v2fOutline vert (appdata_base v)
+            {
+                return vertOutline(v, float2( 1, 1));
             }
+            ENDCG
+        }
+ 
+        Pass
+        {
+            Name "OUTLINEALPHA"
+            BlendOp Min
+            ColorMask A
+ 
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment fragOutlineMask
+ 
+            v2fOutline vert (appdata_base v)
+            {
+                return vertOutline(v, float2(-1, 1));
+            }
+            ENDCG
+        }
+ 
+        Pass
+        {
+            Name "OUTLINEALPHA"
+            BlendOp Min
+            ColorMask A
+ 
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment fragOutlineMask
+ 
+            v2fOutline vert (appdata_base v)
+            {
+                return vertOutline(v, float2( 1,-1));
+            }
+            ENDCG
+        }
+ 
+        Pass
+        {
+            Name "OUTLINEALPHA"
+            BlendOp Min
+            ColorMask A
+ 
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment fragOutlineMask
+ 
+            v2fOutline vert (appdata_base v)
+            {
+                return vertOutline(v, float2(-1,-1));
+            }
+            ENDCG
+        }
+ 
+        Pass
+        {
+            Name "CENTERMASK"
+            ColorMask A
+            Blend Zero One, One OneMinusSrcAlpha
  
             CGPROGRAM
             #pragma vertex vert
@@ -74,20 +149,16 @@ Shader "Unlit/Spine Outline Stencil"
                 return o;
             }
  
-            void frag (v2f i)
+            fixed4 frag (v2f i) : SV_Target
             {
-                clip(tex2D(_MainTex, i.uv).a - 0.5);
+                return tex2D(_MainTex, i.uv);
             }
             ENDCG
         }
  
         Pass
         {
-            Stencil {
-                Ref 1
-                Comp NotEqual
-            }
- 
+            Name "OUTLINECOLOR"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment fragOutline
@@ -101,11 +172,7 @@ Shader "Unlit/Spine Outline Stencil"
  
         Pass
         {
-            Stencil {
-                Ref 1
-                Comp NotEqual
-            }
- 
+            Name "OUTLINECOLOR"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment fragOutline
@@ -119,11 +186,7 @@ Shader "Unlit/Spine Outline Stencil"
  
         Pass
         {
-            Stencil {
-                Ref 1
-                Comp NotEqual
-            }
- 
+            Name "OUTLINECOLOR"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment fragOutline
@@ -137,11 +200,7 @@ Shader "Unlit/Spine Outline Stencil"
  
         Pass
         {
-            Stencil {
-                Ref 1
-                Comp NotEqual
-            }
- 
+            Name "OUTLINECOLOR"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment fragOutline

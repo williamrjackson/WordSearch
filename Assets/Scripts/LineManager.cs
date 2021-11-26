@@ -17,11 +17,14 @@ public class LineManager : MonoBehaviour
     private static int lastColorIndex = 0;
     public static LineManager Instance;
 
+    private Color _currentColor;
+
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            _currentColor = NextColor;
         }
         else
         {
@@ -38,13 +41,17 @@ public class LineManager : MonoBehaviour
         }
     }
 
+    private bool _block = false;
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0) && LetterUnit.over != null)
         {
+            if (_block) return;
+            _block = true;
             currentLineStart = LetterUnit.over;
             currentLine = Instantiate(linePrototype);
-            currentLine.startColor = currentLine.endColor = NextColor;
+            currentLine.startColor = currentLine.endColor = _currentColor;
             currentLine.transform.parent = linePrototype.transform.parent;
             currentLine.startWidth = .5f;
             currentLine.endWidth = .5f;
@@ -76,6 +83,7 @@ public class LineManager : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0) && currentLine != null)
         {
+            _block = false;
             if (!board.CheckWord(currentLineStart, currentLineEnd))
             {
                 Destroy(currentLine.gameObject);
@@ -83,6 +91,7 @@ public class LineManager : MonoBehaviour
             else
             {
                 lineList.Add(currentLine.gameObject);
+                _currentColor = NextColor;
                 board.CheckForWin();
             }
             currentLineStart = null;

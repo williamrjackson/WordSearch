@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1433,7 +1433,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2039,7 +2039,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2395,7 +2395,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3611,7 +3611,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4393,7 +4393,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4490,12 +4490,18 @@ MonoBehaviour:
   linePrototype: {fileID: 808706599}
   board: {fileID: 470140839}
   colors:
-  - {r: 1, g: 0, b: 0.6333332, a: 0.4745098}
-  - {r: 0, g: 0.07363939, b: 1, a: 0.4745098}
-  - {r: 1, g: 0, b: 0.07028246, a: 0.4745098}
-  - {r: 0, g: 1, b: 0.21964121, a: 0.4745098}
-  - {r: 1, g: 0.98995423, b: 0, a: 0.4745098}
-  - {r: 1, g: 0.47338852, b: 0, a: 0.4745098}
+  - {r: 0.20392157, g: 0.59607846, b: 0.85882354, a: 0.5019608}
+  - {r: 0.9176471, g: 0.29803923, b: 0.53333336, a: 0.5019608}
+  - {r: 0.60784316, g: 0.34901962, b: 0.7137255, a: 0.5019608}
+  - {r: 0.94509804, g: 0.76862746, b: 0.05882353, a: 0.5019608}
+  - {r: 0.90588236, g: 0.29803923, b: 0.23529412, a: 0.5019608}
+  - {r: 0.15294118, g: 0.68235296, b: 0.3764706, a: 0.5019608}
+  - {r: 0.20392157, g: 0.28627452, b: 0.36862746, a: 0.5019608}
+  - {r: 0.79215693, g: 0.17254902, b: 0.40784317, a: 0.5019608}
+  - {r: 0.5568628, g: 0.26666668, b: 0.6784314, a: 0.5019608}
+  - {r: 0.9019608, g: 0.49411765, b: 0.13333334, a: 0.5019608}
+  - {r: 0.7529412, g: 0.22352941, b: 0.16862746, a: 0.5019608}
+  - {r: 0.08627451, g: 0.627451, b: 0.52156866, a: 0.5019608}
   showUnsnappedLine: 1
 --- !u!1 &705507993
 GameObject:
@@ -4674,7 +4680,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5208,6 +5214,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 2100000, guid: 451906098113c064eb1d8ac12bde5dac, type: 2}
   - {fileID: 2100000, guid: 681152ec65d504947b7f99dc6b000f5b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -6447,7 +6454,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 90}
+  m_SizeDelta: {x: 0, y: 82.90002}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &990506472
 MonoBehaviour:
@@ -6498,7 +6505,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 240, y: 22.5}
+  m_CellSize: {x: 239.99998, y: 20.725004}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 4
@@ -6793,7 +6800,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8610,7 +8617,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8924,7 +8931,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10311,7 +10318,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10667,7 +10674,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11010,7 +11017,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11669,7 +11676,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11840,7 +11847,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12636,7 +12643,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.1
+  m_fontSize: 18.55
   m_fontSizeBase: 11.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
