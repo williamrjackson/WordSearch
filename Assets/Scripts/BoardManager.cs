@@ -35,7 +35,7 @@ public class BoardManager : MonoBehaviour
             {
                 StopCoroutine(boardRoutine);
             }
-            boardRoutine = StartCoroutine(BuildBoard());
+            _boardRebuildRequired = true;
         }
     }
 
@@ -51,15 +51,18 @@ public class BoardManager : MonoBehaviour
         }
     }
 
+    private bool _boardRebuildRequired = false;
     public void SetRows(int num)
     {
         num = Mathf.Clamp(num, 15, 30);
         rows = num;
+        _boardRebuildRequired = true;
     }
     public void SetColumns(int num)
     {
         num = Mathf.Clamp(num, 15, 30);
         columns = num;
+        _boardRebuildRequired = true;
     }
     private enum Direction { Up, Down, Back, Forward, DiagUpForward, DiagUpBack, DiagDownForward, DiagDownBack}
     
@@ -96,6 +99,14 @@ public class BoardManager : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        if (_boardRebuildRequired)
+        {
+            boardRoutine = StartCoroutine(BuildBoard());
+            _boardRebuildRequired = false;
+        }
+    }
     IEnumerator BuildBoard()
     {
         Debug.Log("Build");
