@@ -30,17 +30,17 @@ namespace Wrj
                                 qs.action.Invoke(results[item.ToString()]);
                             }
                             if (qs.option.GetPersistentEventCount() > 0 && 
-                                bool.TryParse(item.ToString(), out bool bResult))
+                                bool.TryParse(results[item.ToString()], out bool bResult))
                             {
                                 qs.option.Invoke(bResult);
                             }
                             if (qs.integer.GetPersistentEventCount() > 0 && 
-                                int.TryParse(item.ToString(), out int iResult))
+                                int.TryParse(results[item.ToString()], out int iResult))
                             {
                                 qs.integer.Invoke(iResult);
                             }
                             if (qs.floatVal.GetPersistentEventCount() > 0 && 
-                                float.TryParse(item.ToString(), out float fResult))
+                                float.TryParse(results[item.ToString()], out float fResult))
                             {
                                 qs.floatVal.Invoke(fResult);
                             }
