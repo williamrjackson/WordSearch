@@ -134,14 +134,16 @@ public class BoardManager : MonoBehaviour
     IEnumerator BuildBoard()
     {
         Debug.Log("Build");
-        boardTexture.width = columns * 25;
-        boardTexture.height = rows * 25;
+        RenderTexture updatedTexture = new RenderTexture(columns * 50, rows * 50, boardTexture.depth, boardTexture.format);
+        boardTexture = updatedTexture;
         boardImage.SetNativeSize();
+        BoardSizeSetter.Instance.Fit();
         if (!curtain.IsVisible)
         {
             curtain.IsVisible = true;
             yield return new WaitForSeconds(curtain.Duration + .5f);
         }
+        transform.localScale = Vector3.one;
         wordReference.Populate(currentWordList);
 
         int successfullyAddedWords = 0;
@@ -171,7 +173,6 @@ public class BoardManager : MonoBehaviour
             }
         }
 
-        transform.localScale = Vector3.one;
 
         gridLayout.columns = columns;
         

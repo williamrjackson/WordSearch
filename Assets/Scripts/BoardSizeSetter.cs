@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -10,11 +8,17 @@ public class BoardSizeSetter : MonoBehaviour
     [SerializeField]
     RawImage rawImage;
 
-    void Update()
+    public static BoardSizeSetter Instance;
+    void Awake ()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Instance == null)
         {
-            Fit();
+            Instance = this;
+        }
+        else
+        {
+            Debug.LogWarning("Multiple BoardSizeSetter's instantiated. Component removed from " + gameObject.name + ". Instance already found on " + Instance.gameObject.name + "!");
+            Destroy(this);
         }
     }
     public void Fit()

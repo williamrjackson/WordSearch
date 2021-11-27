@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +15,6 @@ public class GridManager : MonoBehaviour
         float width = rect.rect.width / 4f;
         float height = rect.rect.height / 4f;
 
-        grid.cellSize = new Vector2(width, height);
+        grid.cellSize = new Vector2(width * .95f, height * .95f);
     }
 }

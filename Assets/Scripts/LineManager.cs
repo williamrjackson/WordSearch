@@ -56,8 +56,8 @@ public class LineManager : MonoBehaviour
             currentLine = Instantiate(linePrototype);
             currentLine.startColor = currentLine.endColor = _currentColor;
             currentLine.transform.parent = linePrototype.transform.parent;
-            currentLine.startWidth = .5f;
-            currentLine.endWidth = .5f;
+            currentLine.startWidth = .3f * board.transform.localScale.magnitude;
+            currentLine.endWidth = .3f * board.transform.localScale.magnitude;
             currentLine.positionCount = 2;
             currentLine.SetPosition(0, currentLineStart.lineTarget.position);
         }
