@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0d15a3d4965c8541926a7c8961180fe, type: 3}
-  m_Name: Shera
+  m_Name: She-Ra
   m_EditorClassIdentifier: 
   words:
   - word: She-Ra

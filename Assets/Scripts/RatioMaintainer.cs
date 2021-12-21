@@ -26,7 +26,7 @@ public class RatioMaintainer : MonoBehaviour
         float posY = (anchorTop) ? -verticalPosRatio : verticalPosRatio;
         RectTransform rect = GetComponent<RectTransform>();
         rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, canvas.pixelRect.height * posY);
-        rect.sizeDelta = new Vector2( rect.sizeDelta.x, canvas.pixelRect.height * verticalRatio);
+        rect.sizeDelta = new Vector2(rect.sizeDelta.x, canvas.pixelRect.height * verticalRatio);
     }
     private void OnValidate()
     {

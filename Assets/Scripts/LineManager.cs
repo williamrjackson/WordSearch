@@ -45,7 +45,7 @@ public class LineManager : MonoBehaviour
     }
 
     private bool _block = false;
-    void Update()
+    void LateUpdate()
     {
 
         if (Input.GetMouseButtonDown(0) && LetterUnit.over != null)
@@ -84,21 +84,25 @@ public class LineManager : MonoBehaviour
             }
 
         }
-        else if (Input.GetMouseButtonUp(0) && currentLine != null)
+        else if (Input.touchCount == 0 || Input.GetMouseButtonUp(0))
         {
-            _block = false;
-            if (!board.CheckWord(currentLineStart, currentLineEnd))
+            LetterUnit.MouseExit();
+            if (currentLine != null)
             {
-                Destroy(currentLine.gameObject);
+                _block = false;
+                if (!board.CheckWord(currentLineStart, currentLineEnd))
+                {
+                    Destroy(currentLine.gameObject);
+                }
+                else
+                {
+                    lineList.Add(currentLine.gameObject);
+                    _currentColor = NextColor;
+                    board.CheckForWin();
+                }
+                currentLineStart = null;
+                currentLine = null;
             }
-            else
-            {
-                lineList.Add(currentLine.gameObject);
-                _currentColor = NextColor;
-                board.CheckForWin();
-            }
-            currentLineStart = null;
-            currentLine = null;
         }
     }
 

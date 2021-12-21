@@ -13,7 +13,7 @@ namespace Wrj
     #if UNITY_WEBGL
             string url = Application.absoluteURL;
             // Test string:
-            // string url = "www.test.com/index.htm?EnableHints=true&WordList=Engagement,In,On,Oh&w=16&h=16&float=1.75";
+            // string url = "https://williamrjackson.github.io/WordSearch/index.html?WordList=many,if,long,about,got,six,never,seven,eight,today,myself,much,keep,try,start";
             var splitUrl = url.Split(new[] { '?' }, 2);
             if (splitUrl.Length > 1)
             {
